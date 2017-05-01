@@ -1,10 +1,10 @@
 
-  <!DOCTYPE HTML>
+ <!DOCTYPE HTML>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   
-    <title>归档: 2017 | LeungYanting&#39;s Blog</title>
+    <title>CategoryCloud | LeungYanting&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="LeungYanting">
@@ -12,11 +12,12 @@
 
     
     <meta property="og:type" content="website">
-<meta property="og:title" content="LeungYanting&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/child/archives/2017/page/2/index.html">
+<meta property="og:title" content="CategoryCloud">
+<meta property="og:url" content="http://yoursite.com/child/categories/index.html">
 <meta property="og:site_name" content="LeungYanting&#39;s Blog">
+<meta property="og:updated_time" content="2017-03-30T06:12:58.472Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeungYanting&#39;s Blog">
+<meta name="twitter:title" content="CategoryCloud">
 
     
     <link rel="alternative" href="/atom.xml" title="LeungYanting&#39;s Blog" type="application/atom+xml">
@@ -74,52 +75,21 @@
 </div>
       </header>
       <div id="container">
-        
-
+          
 <div class="archive-title" >
-  <h2 class="archive-icon">2017</h2>
-  
-  <div class="archiveslist archive-float clearfix">
-   <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">2017 年 03 月</a><span class="archive-list-count">6</span></li></ul>
- </div>
-  
+<h2 class="category-icon">分类</h2>
+
+<a data-src="/categories/日志/" href="#日志" title="日志">日志<sup>3</sup></a>
+
+<a data-src="/categories/日志/第一天/" href="#第一天" title="第一天">第一天<sup>3</sup></a>
+
 </div>
-<div id="main" class="archive-part clearfix">
-  <div id="archive-page">
+<div id="main" class="archive-part">
+<div class="all-list-box">
 
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2017/03/29/hello-john/" title="goodbye cindy" itemprop="url">
-  
-
-    <time datetime="2017-03-29T01:34:46.000Z" itemprop="datePublished">2017-03-29</time>
-
-
-    <h1 itemprop="name">goodbye cindy</h1>
-
-  </a>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2017/03/28/hello-candy - 副本 (2) - 副本/" title="hello candy" itemprop="url">
-  
-
-    <time datetime="2017-03-28T15:18:12.000Z" itemprop="datePublished">2017-03-28</time>
-
-
-    <h1 itemprop="name">hello candy</h1>
-
-  </a>
-</section>
-
-
-  <nav id="page-nav" class="clearfix archive-nav">
-    <a class="extend prev" rel="prev" href="/archives/2017/"><span></span>Prev</a><a class="page-number" href="/archives/2017/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2017/page/3/">3</a><a class="extend next" rel="next" href="/archives/2017/page/3/">Next<span></span></a>
-  </nav>
-
-  </div>
 </div>
+</div>
+
 
       </div>
       <footer><div id="footer" >
@@ -218,6 +188,24 @@ $(document).ready(function(){
 
 
 
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var list    = $('.archive-title a'),
+      box     = $('.all-list-box'),
+      first   = $('.archive-title a:first-of-type');
+      box.load(first.attr('data-src').toString()+' #archive-page');
+      first.addClass('current');
+  list.each(function(){
+    $(this).click(function(){
+      var listSrc=$(this).attr('data-src').toString()+' #archive-page';
+      box.load(listSrc);
+      list.removeClass('current');
+      $(this).addClass('current');
+     });  
+    });
+  }); 
+</script>
 
 
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
